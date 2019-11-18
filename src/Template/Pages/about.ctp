@@ -26,7 +26,7 @@
 	<p><?= __('Diagramme de la bd') ?></p>
 	<?php echo $this->html->image('diagramme_bd.png', ['alt' => 'diagramme']); ?>
     <p><a href="http://www.databaseanswers.org/data_models/library/index.htm"><?= __('Diagramme original') ?></a></p>
-	<p><a href="https://github.com/jmr4274tbj/TP_app_internet">Lien github</a></p>
+	<p><a href="https://github.com/jmr4274tbj/Applications_Internet">Lien github</a></p>
 	<p> 
 	<h4>Étapes dutilisations :</h4>
 	<p>

@@ -57,14 +57,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <div class="top-bar-section">
                 <ul class="right">
                     <li><?=
-                        $this->Html->link('Listes dynamiques', [
-                            'controller' => 'Loans',
-                            'action' => 'add'
-                        ]);
-                        ?>
-                    </li>
-                    <li><?=
-                        $this->Html->link('Autocomplete', [
+                        $this->Html->link('Search Publishers', [
                             'controller' => 'Publishers',
                             'action' => 'autocompletedemo'
                         ]);
@@ -80,21 +73,19 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                             echo $this->Html->link('login', ['controller' => 'Users', 'action' => 'login']);
                         }
                         ?>
-                    </li> 
-					
-					<li>
-						<?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?>
-					</li>                
-					<li>
-						<?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?>
-					</li>               
-					<li>
-						<?= $this->Html->link('home', ['controller' => 'Pages', 'action' => 'home']) ?>
-					</li>				
-					 <li>
-						<?= $this->Html->link('about', ['controller' => 'Pages', 'action' => 'about']) ?>
-					</li>   
-
+                    </li> 					
+                    <li>
+                        <?= $this->Html->link('Français', ['action' => 'changeLang', 'fr_CA'], ['escape' => false]) ?>
+                    </li>                
+                    <li>
+                        <?= $this->Html->link('English', ['action' => 'changeLang', 'en_US'], ['escape' => false]) ?>
+                    </li>               
+                    <li>
+                        <?= $this->Html->link('home', ['controller' => 'Pages', 'action' => 'home']) ?>
+                    </li>				
+                    <li>
+                        <?= $this->Html->link('about', ['controller' => 'Pages', 'action' => 'about']) ?>
+                    </li>   
                     <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
                     <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
                 </ul>

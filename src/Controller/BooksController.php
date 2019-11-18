@@ -12,6 +12,11 @@ use App\Controller\AppController;
  */
 class BooksController extends AppController
 {
+    public function initialize() {
+        parent::initialize();
+        $this->Auth->allow(['add', 'edit', 'delete']);
+    }
+    
     /**
      * Index method
      *
@@ -50,7 +55,8 @@ class BooksController extends AppController
      */
     public function add()
     {
-        $book = $this->Books->newEntity();
+        $book = $this->Books->newEntity();     
+        
         if ($this->request->is('post')) {
             $book = $this->Books->patchEntity($book, $this->request->getData());
             if ($this->Books->save($book)) {
@@ -59,7 +65,8 @@ class BooksController extends AppController
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The book could not be saved. Please, try again.'));
-        }
+        }   
+        
         $loans = $this->Books->Loans->find('list', ['limit' => 200]);
         $this->set(compact('book', 'loans'));
     }
@@ -75,7 +82,8 @@ class BooksController extends AppController
     {
         $book = $this->Books->get($id, [
             'contain' => []
-        ]);
+        ]);     
+        
         if ($this->request->is(['patch', 'post', 'put'])) {
             $book = $this->Books->patchEntity($book, $this->request->getData());
             if ($this->Books->save($book)) {

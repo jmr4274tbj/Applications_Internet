@@ -22,6 +22,10 @@
             <th scope="row"><?= __('Loan') ?></th>
             <td><?= $book->has('loan') ? $this->Html->link($book->loan->id, ['controller' => 'Loans', 'action' => 'view', $book->loan->id]) : '' ?></td>
         </tr>
+         <tr>
+            <th scope="row"><?= __('Publisher') ?></th>
+            <td><?= h($book->publisher) ?></td>
+        </tr>
         <tr>
             <th scope="row"><?= __('Title') ?></th>
             <td><?= h($book->title) ?></td>

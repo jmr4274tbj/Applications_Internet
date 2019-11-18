@@ -59,6 +59,12 @@ class BooksTable extends Table
             ->allowEmptyString('id', null, 'create');
 
         $validator
+            ->scalar('publisher')
+            ->maxLength('publisher', 255)
+            ->requirePresence('publisher', 'create')
+            ->notEmptyString('publisher');
+          
+        $validator
             ->scalar('title')
             ->maxLength('title', 255)
             ->requirePresence('title', 'create')

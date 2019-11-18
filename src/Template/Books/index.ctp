@@ -17,7 +17,8 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-				<th scope="col"><?= $this->Paginator->sort('loan_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('loan_id') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('publisher') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('title') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('author') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('date_published') ?></th>
@@ -30,6 +31,7 @@
             <?php foreach ($books as $book): ?>
             <tr>
                 <td><?= $book->has('loan') ? $this->Html->link($book->loan->id, ['controller' => 'Loans', 'action' => 'view', $book->loan->id]) : '' ?></td>
+                <td><?= h($book->publisher) ?></td>
                 <td><?= h($book->title) ?></td>
                 <td><?= h($book->author) ?></td>
                 <td><?= h($book->date_published) ?></td>

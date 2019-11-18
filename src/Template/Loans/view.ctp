@@ -33,10 +33,6 @@
             <td><?= h($loan->note) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('Slug') ?></th>
-            <td><?= h($loan->slug) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('Fine') ?></th>
             <td><?= $this->Number->format($loan->fine) ?></td>
         </tr>
@@ -66,7 +62,7 @@
         <?php if (!empty($loan->tags)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-				<th scope="col"><?= __('Id') ?></th>
+                <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
@@ -74,7 +70,7 @@
             </tr>
             <?php foreach ($loan->tags as $tags): ?>
             <tr>
-				<td><?= h($tags->id) ?></td>
+		<td><?= h($tags->id) ?></td>
                 <td><?= h($tags->title) ?></td>
                 <td><?= h($tags->created) ?></td>
                 <td><?= h($tags->modified) ?></td>
@@ -115,6 +111,7 @@
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Title') ?></th>
+                <th scope="col"><?= __('Publisher') ?></th>
                 <th scope="col"><?= __('Author') ?></th>
                 <th scope="col"><?= __('Date Published') ?></th>
                 <th scope="col"><?= __('Description') ?></th>
@@ -124,6 +121,7 @@
             </tr>
             <?php foreach ($loan->books as $books): ?>
             <tr>
+                <td><?= h($books->publisher) ?></td>
                 <td><?= h($books->title) ?></td>
                 <td><?= h($books->author) ?></td>
                 <td><?= h($books->date_published) ?></td>

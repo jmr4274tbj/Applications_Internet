@@ -17,6 +17,7 @@
     <fieldset>
         <legend><?= __('Add Book') ?></legend>
         <?php
+            echo $this->Form->control('publisher');
             echo $this->Form->control('title');
             echo $this->Form->control('author');
             echo $this->Form->control('date_published');

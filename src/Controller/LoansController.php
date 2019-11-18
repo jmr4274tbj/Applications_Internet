@@ -40,15 +40,12 @@ class LoansController extends AppController
      * @return \Cake\Http\Response|null
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function view($slug = null)
+    public function view($id = null)
     {
-        $loan = $this->Loans
-                ->findBySlug($slug)
-                ->contain('Tags') // load associated Tags
-                ->contain('Books')
-                ->contain('Users')
-                ->contain('Files')
-                ->firstOrFail();
+        $loan = $this->Loans->get($id, [
+            'contain' => ['Users', 'Tags', 'Books', 'Files']
+        ]);
+        
         $this->set('loan', $loan);
     }
 
@@ -99,15 +96,10 @@ class LoansController extends AppController
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function edit($slug = null)
+    public function edit($id = null)
     {
-        $loan = $this->Loans
-                ->findBySlug($slug)
-                ->contain('Tags') // load associated Tags
-                ->firstOrFail();
-        /* $loan = $this->Loans->get($id, [
-          'contain' => ['Tags']
-          ]); */
+        $loan = $this->Loans->get($id);
+                
         if ($this->request->is(['patch', 'post', 'put'])) {
             $loan = $this->Loans->patchEntity($loan, $this->request->getData(), [
                 // Added: Disable modification of user_id.
@@ -119,10 +111,25 @@ class LoansController extends AppController
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The loan could not be saved. Please, try again.'));
-        }
+        }     
+        // Bâtir la liste des catégories  
+        $this->loadModel('Categories');
+        $categories = $this->Categories->find('list', ['limit' => 200]);
+
+        // Extraire le id de la première catégorie
+        $categories = $categories->toArray();
+        reset($categories);
+        $category_id = key($categories);
+
+        // Bâtir la liste des sous-catégories reliées à cette catégorie
+        $subcategories = $this->Loans->Subcategories->find('list', [
+            'conditions' => ['Subcategories.category_id' => $category_id],
+        ]);
+        
         $users = $this->Loans->Users->find('list', ['limit' => 200]);
         $tags = $this->Loans->Tags->find('list', ['limit' => 200]);
-        $this->set(compact('loan', 'users', 'tags'));
+        $files = $this->Loans->Files->find('list', ['limit' => 200]);
+        $this->set(compact('loan', 'tags', 'files', 'subcategories', 'categories'));
     }
 
     /**
@@ -164,7 +171,7 @@ class LoansController extends AppController
     public function isAuthorized($user) {
         $action = $this->request->getParam('action');
         // The add and tags actions are always allowed to logged in users.
-        if (in_array($action, ['add', 'tags'])) {
+        if (in_array($action, ['add', 'tags', 'edit', 'delete'])) {
             return true;
         }
 

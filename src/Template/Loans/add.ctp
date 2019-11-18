@@ -1,4 +1,13 @@
 <?php
+$urlToLinkedListFilter = $this->Url->build([
+    "controller" => "Subcategories",
+    "action" => "getByCategory",
+    "_ext" => "json"
+        ]);
+echo $this->Html->scriptBlock('var urlToLinkedListFilter = "' . $urlToLinkedListFilter . '";', ['block' => true]);
+echo $this->Html->script('Loans/add', ['block' => 'scriptBottom']);
+?>
+<?php
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Loan $loan
@@ -14,6 +23,10 @@
         <li><?= $this->Html->link(__('New Book'), ['controller' => 'Books', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
+                <li><?= $this->Html->link(__('List Files'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New File'), ['controller' => 'Files', 'action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('List Subcategories'), ['controller' => 'Subcategories', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New Subcategory'), ['controller' => 'Subcategories', 'action' => 'add']) ?></li>
     </ul>
 </nav>
 <div class="loans form large-9 medium-8 columns content">
@@ -21,7 +34,8 @@
     <fieldset>
         <legend><?= __('Add Loan') ?></legend>
         <?php
-            echo $this->Form->control('user_id', ['options' => $users]);
+            echo $this->Form->control('Category_id', ['options' => $categories]);
+            echo $this->Form->control('subcategory_id', ['options' => $subcategories]);
             echo $this->Form->control('fine');
             echo $this->Form->control('note');
             echo $this->Form->control('slug');
@@ -29,6 +43,7 @@
             echo $this->Form->control('date_due');
             echo $this->Form->control('date_returned');
             echo $this->Form->control('tags._ids', ['options' => $tags]);
+            echo $this->Form->control('files._ids', ['options' => $files]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

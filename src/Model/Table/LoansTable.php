@@ -47,6 +47,9 @@ class LoansTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+		$this->belongsTo('Subcategories', [
+            'foreignKey' => 'subcategory_id'
+        ]);
         $this->hasMany('Books', [
             'foreignKey' => 'loan_id'
         ]);

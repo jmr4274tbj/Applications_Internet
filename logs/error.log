@@ -2364,3 +2364,530 @@ Request URL: /loans/view/3
 Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/books
 
 
+2019-11-18 04:40:54 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "loans"
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\src\Controller\LoansController.php(51): Cake\ORM\Query->firstOrFail()
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Controller\Controller.php(610): App\Controller\LoansController->view('1')
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\LoansController))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#19 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#20 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#21 {main}
+Request URL: /loans/view/1
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/
+
+
+2019-11-18 05:45:03 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 05:45:03 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.4274063110352)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2545320)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+2019-11-18 05:45:43 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 05:45:43 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.362663269043)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2477432)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+2019-11-18 05:47:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 05:47:12 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.3572082519531)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2471712)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+2019-11-18 05:47:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 05:47:15 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.362663269043)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2477432)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+2019-11-18 05:55:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 05:55:57 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.3572082519531)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2471712)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+2019-11-18 05:56:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 05:56:58 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.362663269043)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2477432)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+2019-11-18 05:57:58 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 05:57:58 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.362663269043)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2477432)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+2019-11-18 05:58:23 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 05:58:23 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.362663269043)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2477432)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+2019-11-18 05:59:57 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 05:59:57 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.362663269043)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2477432)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+2019-11-18 06:03:51 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Js could not be found.
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ControllerFactory.php(39): Cake\Http\ControllerFactory->missingController(Object(Cake\Http\ServerRequest))
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(91): Cake\Http\ControllerFactory->create(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\BaseApplication.php(235): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(123): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(97): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#14 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#15 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#16 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#17 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#18 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#19 {main}
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add
+
+
+2019-11-18 06:03:51 Error: [IntlException] Constructor failed in Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php on line 70
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(70): MessageFormatter->__construct('fr_CA', '{0,nombre,#,###...')
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Formatter\IcuFormatter.php(43): Cake\I18n\Formatter\IcuFormatter->_formatMessage('fr_CA', '{0,nombre,#,###...', Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Translator.php(86): Cake\I18n\Formatter\IcuFormatter->format('fr_CA', '{0,nombre,#,###...', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\functions.php(88): Cake\I18n\Translator->translate('{0,number,#,###...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\I18n\Number.php(92): __d('cake', '{0,number,#,###...', 2.362663269043)
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Panel\TimerPanel.php(125): Cake\I18n\Number::toReadableSize(2477432)
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\ToolbarService.php(245): DebugKit\Panel\TimerPanel->summary()
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(54): DebugKit\ToolbarService->saveData(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\vendor\cakephp\cakephp\src\Http\Server.php(98): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\TP2_JonathanMartelRaiche\webroot\index.php(40): Cake\Http\Server->run()
+#12 {main}
+
+
+Request URL: /js/Articles/add.js
+Referer URL: http://localhost/CakeCms_3_8_3/TP2_JonathanMartelRaiche/loans/add

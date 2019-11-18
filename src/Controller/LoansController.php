@@ -65,7 +65,7 @@ class LoansController extends AppController
 
             // Changed: Set the user_id from the session.
             $loan->user_id = $this->Auth->user('id');
-            //debug($loan); die();
+	    //debug($loan); die();
             if ($this->Loans->save($loan)) {
                 $this->Flash->success(__('The loan has been saved.'));
 
@@ -73,9 +73,23 @@ class LoansController extends AppController
             }
             $this->Flash->error(__('The loan could not be saved. Please, try again.'));
         }
-        $users = $this->Loans->Users->find('list', ['limit' => 200]);
+        // Bâtir la liste des catégories  
+        $this->loadModel('Categories');
+        $categories = $this->Categories->find('list', ['limit' => 200]);
+
+        // Extraire le id de la première catégorie
+        $categories = $categories->toArray();
+        reset($categories);
+        $category_id = key($categories);
+
+        // Bâtir la liste des sous-catégories reliées à cette catégorie
+        $subcategories = $this->Loans->Subcategories->find('list', [
+            'conditions' => ['Subcategories.category_id' => $category_id],
+        ]);
+        
         $tags = $this->Loans->Tags->find('list', ['limit' => 200]);
-        $this->set(compact('loan', 'users', 'tags'));
+        $files = $this->Loans->Files->find('list', ['limit' => 200]);
+        $this->set(compact('loan', 'tags', 'files', 'subcategories', 'categories'));
     }
 
     /**

@@ -35,6 +35,7 @@
             echo $this->Form->control('date_due');
             echo $this->Form->control('date_returned');
             echo $this->Form->control('tags._ids', ['options' => $tags]);
+            echo $this->Form->control('files._ids', ['options' => $files]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

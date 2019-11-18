@@ -1,0 +1,388 @@
+2019-09-12 12:56:49 Error: [PDOException] SQLSTATE[HY000] [2002] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée.
+ in C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Database\Driver.php on line 92
+Stack Trace:
+#0 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Database\Driver.php(92): PDO->__construct('mysql:host=loca...', 'root', 'mysql', Array)
+#1 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(106): Cake\Database\Driver->_connect('mysql:host=loca...', Array)
+#2 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Database\Connection.php(391): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1095): Cake\Database\Connection->getSchemaCollection()
+#8 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(1049): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(213): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(131): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#11 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(114): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'loans', 'Loans')
+#12 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Loans')
+#13 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Loans')
+#14 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Loans', 0)
+#15 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#16 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('loans')
+#17 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#18 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#19 C:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_2_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#20 {main}
+
+
+2019-11-16 02:21:15 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(107): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(41): Migrations\Shell\Task\MigrationSnapshotTask->getCollection('default')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-11-16 02:25:41 Error: [Cake\Database\Exception\MissingDriverException] Database driver \Cake\Database\Driver\Sqlite::class could not be found. in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php on line 174
+Exception Attributes: array (
+  'driver' => '\\Cake\\Database\\Driver\\Sqlite::class',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver('\\Cake\\Database\\...', Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(107): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(41): Migrations\Shell\Task\MigrationSnapshotTask->getCollection('default')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-11-16 02:29:29 Error: [Cake\Database\Exception\MissingDriverException] Database driver \Cake\Database\Driver\Sqlite::class could not be found. in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php on line 174
+Exception Attributes: array (
+  'driver' => '\\Cake\\Database\\Driver\\Sqlite::class',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver('\\Cake\\Database\\...', Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(107): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(41): Migrations\Shell\Task\MigrationSnapshotTask->getCollection('default')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-11-16 02:35:33 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(107): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(41): Migrations\Shell\Task\MigrationSnapshotTask->getCollection('default')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-11-16 02:36:32 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(107): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(41): Migrations\Shell\Task\MigrationSnapshotTask->getCollection('default')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-11-16 02:38:42 Error: [Cake\Database\Exception\MissingDriverException] Database driver vendor\cakephp\cakephp\src\Database\Driver\Sqlite could not be found. in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php on line 174
+Exception Attributes: array (
+  'driver' => 'vendor\\cakephp\\cakephp\\src\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver('vendor\\cakephp\\...', Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(107): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\migrations\src\Shell\Task\MigrationSnapshotTask.php(41): Migrations\Shell\Task\MigrationSnapshotTask->getCollection('default')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\bake\src\Shell\Task\SimpleBakeTask.php(91): Migrations\Shell\Task\MigrationSnapshotTask->bake('Initial')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(532): Bake\Shell\Task\SimpleBakeTask->main('Initial')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\Shell.php(525): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_broken_after_migrations\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#12 {main}
+
+
+2019-11-17 22:25:59 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-17 23:24:07 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(385): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-17 23:47:34 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-18 00:06:50 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-18 00:20:55 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-18 00:40:57 Error: [Cake\Database\Exception\MissingDriverException] Database driver Driver\Sqlite could not be found. in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 174
+Exception Attributes: array (
+  'driver' => 'Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver('Driver\\Sqlite', Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-18 00:43:27 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-18 00:43:59 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-18 00:44:53 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-18 00:55:36 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_3_1_after_migrations - Copy\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+
+2019-11-18 01:15:17 Error: [Cake\Database\Exception\MissingExtensionException] Database driver Cake\Database\Driver\Sqlite cannot be used due to a missing PHP extension or unmet dependency in Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\cakephp\src\Database\Connection.php on line 179
+Exception Attributes: array (
+  'driver' => 'Cake\\Database\\Driver\\Sqlite',
+)
+Stack Trace:
+#0 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\cakephp\src\Database\Connection.php(120): Cake\Database\Connection->setDriver(Object(Cake\Database\Driver\Sqlite), Array)
+#1 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\cakephp\src\Datasource\ConnectionRegistry.php(89): Cake\Database\Connection->__construct(Array)
+#2 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\cakephp\src\Core\ObjectRegistry.php(97): Cake\Datasource\ConnectionRegistry->_create('Cake\\Database\\C...', 'default', Array)
+#3 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\cakephp\src\Datasource\ConnectionManager.php(205): Cake\Core\ObjectRegistry->load('Cake\\Database\\C...', Array)
+#4 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(196): Cake\Datasource\ConnectionManager::get('default')
+#5 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(113): Bake\Shell\Task\ModelTask->getTableObject('Publishers', 'publishers')
+#6 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(101): Bake\Shell\Task\ModelTask->bake('Publishers')
+#7 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\bake\src\Shell\BakeShell.php(279): Bake\Shell\Task\ModelTask->main('Publishers')
+#8 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php(65): Bake\Shell\BakeShell->Bake\Shell\{closure}('Publishers', 0)
+#9 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\bake\src\Shell\BakeShell.php(280): Cake\Collection\Collection->each(Object(Closure))
+#10 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\cakephp\src\Console\Shell.php(518): Bake\Shell\BakeShell->all('publishers')
+#11 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(384): Cake\Console\Shell->runCommand(Array, true)
+#12 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\vendor\cakephp\cakephp\src\Console\CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Bake\Shell\BakeShell), Array)
+#13 Q:\UniServerZ\www\CakeCms_3_8_3\CakeCms_v0_4_1\bin\cake.php(12): Cake\Console\CommandRunner->run(Array)
+#14 {main}
+
+

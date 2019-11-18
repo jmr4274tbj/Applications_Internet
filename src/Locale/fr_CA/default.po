@@ -1,0 +1,526 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2019-11-14 21:19+0000\n"
+"PO-Revision-Date: 2019-11-14 16:48-0500\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: \n"
+"Language: fr_CA\n"
+
+#: Controller/BooksController.php:57 Controller/BooksController.php:82
+msgid "The book has been saved."
+msgstr "Le livre a été sauvé."
+
+#: Controller/BooksController.php:61 Controller/BooksController.php:86
+msgid "The book could not be saved. Please, try again."
+msgstr "Le livre n'a pas pu être sauvé. S'll vous plaît, réessayez."
+
+#: Controller/BooksController.php:104
+msgid "The book has been deleted."
+msgstr "Le livre a été supprimé."
+
+#: Controller/BooksController.php:106
+msgid "The book could not be deleted. Please, try again."
+msgstr "Le livre n'a pas pu être supprimé. S'll vous plaît, réessayez."
+
+#: Controller/FilesController.php:69
+msgid "File has been uploaded and inserted successfully."
+msgstr "Le fichier a été téléchargé et inséré avec succès."
+
+#: Controller/FilesController.php:71
+msgid "Unable to upload file, please try again."
+msgstr "Impossible de télécharger le fichier, veuillez réessayer."
+
+#: Controller/FilesController.php:74
+msgid "Unable to save file, please try again."
+msgstr "Impossible de sauvegarder le fichier, veuillez réessayer."
+
+#: Controller/FilesController.php:77
+msgid "Please choose a file to upload."
+msgstr "Veuillez choisir un fichier à télécharger."
+
+#: Controller/FilesController.php:99
+msgid "The file has been saved."
+msgstr "Le fichier a été enregistré."
+
+#: Controller/FilesController.php:103
+msgid "The file could not be saved. Please, try again."
+msgstr "Le fichier n'a pas pu être enregistré. Veuillez réessayer."
+
+#: Controller/FilesController.php:121
+msgid "The file has been deleted."
+msgstr "Le fichier a été supprimé."
+
+#: Controller/FilesController.php:123
+msgid "The file could not be deleted. Please, try again."
+msgstr "Le fichier n'a pas pu être supprimé. Veuillez réessayer."
+
+#: Controller/LoansController.php:70 Controller/LoansController.php:103
+msgid "The loan has been saved."
+msgstr "Le prêt a été enregistré."
+
+#: Controller/LoansController.php:74 Controller/LoansController.php:107
+msgid "The loan could not be saved. Please, try again."
+msgstr "Le prêt n'a pas pu être enregistré. Veuillez réessayer."
+
+#: Controller/LoansController.php:126
+msgid "The loan has been deleted."
+msgstr "Le prêt a été supprimé."
+
+#: Controller/LoansController.php:128
+msgid "The loan could not be deleted. Please, try again."
+msgstr "Le prêt n'a pas pu être supprimé. Veuillez réessayer."
+
+#: Controller/TagsController.php:54 Controller/TagsController.php:79
+msgid "The tag has been saved."
+msgstr "La balise a été enregistrée."
+
+#: Controller/TagsController.php:58 Controller/TagsController.php:83
+msgid "The tag could not be saved. Please, try again."
+msgstr "La balise n'a pas pu être enregistrée. Veuillez réessayer."
+
+#: Controller/TagsController.php:101
+msgid "The tag has been deleted."
+msgstr "La balise a été supprimée."
+
+#: Controller/TagsController.php:103
+msgid "The tag could not be deleted. Please, try again."
+msgstr "La balise n'a pas pu être supprimée. Veuillez réessayer."
+
+#: Controller/UsersController.php:60 Controller/UsersController.php:84
+msgid "The user has been saved."
+msgstr "L'utilisateur a été enregistré."
+
+#: Controller/UsersController.php:64 Controller/UsersController.php:88
+msgid "The user could not be saved. Please, try again."
+msgstr "L'utilisateur n'a pas pu être enregistré. Veuillez réessayer."
+
+#: Controller/UsersController.php:105
+msgid "The user has been deleted."
+msgstr "L'utilisateur a été supprimé."
+
+#: Controller/UsersController.php:107
+msgid "The user could not be deleted. Please, try again."
+msgstr "L'utilisateur n'a pas pu être supprimé. Veuillez réessayer."
+
+#: Template/Books/add.ctp:9 Template/Books/edit.ctp:9
+#: Template/Books/index.ctp:9 Template/Books/index.ctp:25
+#: Template/Books/view.ctp:9 Template/Files/add.ctp:9 Template/Files/edit.ctp:9
+#: Template/Files/index.ctp:9 Template/Files/index.ctp:27
+#: Template/Files/view.ctp:9 Template/Files/view.ctp:61
+#: Template/Loans/add.ctp:9 Template/Loans/edit.ctp:9
+#: Template/Loans/index.ctp:9 Template/Loans/index.ctp:33
+#: Template/Loans/view.ctp:9 Template/Loans/view.ctp:72
+#: Template/Loans/view.ctp:121 Template/Tags/add.ctp:9 Template/Tags/edit.ctp:9
+#: Template/Tags/index.ctp:9 Template/Tags/index.ctp:23
+#: Template/Tags/view.ctp:9 Template/Tags/view.ctp:48 Template/Users/add.ctp:9
+#: Template/Users/edit.ctp:9 Template/Users/index.ctp:9
+#: Template/Users/index.ctp:23 Template/Users/view.ctp:9
+#: Template/Users/view.ctp:48
+msgid "Actions"
+msgstr "Actions"
+
+#: Template/Books/add.ctp:10 Template/Books/edit.ctp:16
+#: Template/Books/view.ctp:12 Template/Loans/add.ctp:13
+#: Template/Loans/edit.ctp:19 Template/Loans/index.ctp:13
+#: Template/Loans/view.ctp:16
+msgid "List Books"
+msgstr "Afficher les livres"
+
+#: Template/Books/add.ctp:11 Template/Books/edit.ctp:17
+#: Template/Books/index.ctp:11 Template/Books/view.ctp:14
+#: Template/Files/add.ctp:11 Template/Files/edit.ctp:17
+#: Template/Files/index.ctp:11 Template/Files/view.ctp:14
+#: Template/Loans/add.ctp:10 Template/Loans/edit.ctp:16
+#: Template/Loans/view.ctp:12 Template/Tags/add.ctp:11
+#: Template/Tags/edit.ctp:17 Template/Tags/index.ctp:11
+#: Template/Tags/view.ctp:14 Template/Users/add.ctp:11
+#: Template/Users/edit.ctp:17 Template/Users/index.ctp:11
+#: Template/Users/view.ctp:14
+msgid "List Loans"
+msgstr "Afficher les prêts"
+
+#: Template/Books/add.ctp:12 Template/Books/edit.ctp:18
+#: Template/Books/index.ctp:12 Template/Books/view.ctp:15
+#: Template/Files/add.ctp:12 Template/Files/edit.ctp:18
+#: Template/Files/index.ctp:12 Template/Files/view.ctp:15
+#: Template/Loans/index.ctp:10 Template/Loans/view.ctp:13
+#: Template/Tags/add.ctp:12 Template/Tags/edit.ctp:18
+#: Template/Tags/index.ctp:12 Template/Tags/view.ctp:15
+#: Template/Users/add.ctp:12 Template/Users/edit.ctp:18
+#: Template/Users/index.ctp:12 Template/Users/view.ctp:15
+msgid "New Loan"
+msgstr "Nouveau prêt"
+
+#: Template/Books/add.ctp:18
+msgid "Add Book"
+msgstr "Ajouter un livre"
+
+#: Template/Books/add.ctp:26 Template/Books/edit.ctp:32
+#: Template/Files/add.ctp:26 Template/Files/edit.ctp:32
+#: Template/Loans/add.ctp:34 Template/Loans/edit.ctp:40
+#: Template/Tags/add.ctp:24 Template/Tags/edit.ctp:30 Template/Users/add.ctp:24
+#: Template/Users/edit.ctp:30
+msgid "Submit"
+msgstr "Soumettre"
+
+#: Template/Books/edit.ctp:11 Template/Books/index.ctp:41
+#: Template/Files/edit.ctp:11 Template/Files/index.ctp:52
+#: Template/Files/view.ctp:78 Template/Loans/edit.ctp:11
+#: Template/Loans/index.ctp:51 Template/Loans/view.ctp:82
+#: Template/Loans/view.ctp:134 Template/Tags/edit.ctp:11
+#: Template/Tags/index.ctp:35 Template/Tags/view.ctp:64
+#: Template/Users/edit.ctp:11 Template/Users/index.ctp:35
+#: Template/Users/view.ctp:64
+msgid "Delete"
+msgstr "Effacer"
+
+#: Template/Books/edit.ctp:13 Template/Books/index.ctp:41
+#: Template/Books/view.ctp:11 Template/Files/edit.ctp:13
+#: Template/Files/index.ctp:52 Template/Files/view.ctp:11
+#: Template/Files/view.ctp:78 Template/Loans/edit.ctp:13
+#: Template/Loans/index.ctp:51 Template/Loans/view.ctp:11
+#: Template/Loans/view.ctp:82 Template/Loans/view.ctp:134
+#: Template/Tags/edit.ctp:13 Template/Tags/index.ctp:35
+#: Template/Tags/view.ctp:11 Template/Tags/view.ctp:64
+#: Template/Users/edit.ctp:13 Template/Users/index.ctp:35
+#: Template/Users/view.ctp:11 Template/Users/view.ctp:64
+msgid "Are you sure you want to delete # {0}?"
+msgstr "Êtes-vous sûr de vouloir supprimer # {0}?"
+
+#: Template/Books/edit.ctp:24 Template/Books/view.ctp:10
+msgid "Edit Book"
+msgstr "Modifier le livre"
+
+#: Template/Books/index.ctp:10 Template/Books/view.ctp:13
+#: Template/Loans/add.ctp:14 Template/Loans/edit.ctp:20
+#: Template/Loans/index.ctp:14 Template/Loans/view.ctp:17
+msgid "New Book"
+msgstr "Nouveau livre"
+
+#: Template/Books/index.ctp:16
+msgid "Books"
+msgstr "Livres"
+
+#: Template/Books/index.ctp:39 Template/Files/index.ctp:50
+#: Template/Files/view.ctp:76 Template/Loans/index.ctp:49
+#: Template/Loans/view.ctp:80 Template/Loans/view.ctp:132
+#: Template/Tags/index.ctp:33 Template/Tags/view.ctp:62
+#: Template/Users/index.ctp:33 Template/Users/view.ctp:62
+msgid "View"
+msgstr "Voir"
+
+#: Template/Books/index.ctp:40 Template/Files/index.ctp:51
+#: Template/Files/view.ctp:77 Template/Loans/index.ctp:50
+#: Template/Loans/view.ctp:81 Template/Loans/view.ctp:133
+#: Template/Tags/index.ctp:34 Template/Tags/view.ctp:63
+#: Template/Users/index.ctp:34 Template/Users/view.ctp:63
+msgid "Edit"
+msgstr "Modifier"
+
+#: Template/Books/index.ctp:49 Template/Files/index.ctp:60
+#: Template/Loans/index.ctp:59 Template/Tags/index.ctp:43
+#: Template/Users/index.ctp:43
+msgid "first"
+msgstr "premier"
+
+#: Template/Books/index.ctp:50 Template/Files/index.ctp:61
+#: Template/Loans/index.ctp:60 Template/Tags/index.ctp:44
+#: Template/Users/index.ctp:44
+msgid "previous"
+msgstr "précédent"
+
+#: Template/Books/index.ctp:52 Template/Files/index.ctp:63
+#: Template/Loans/index.ctp:62 Template/Tags/index.ctp:46
+#: Template/Users/index.ctp:46
+msgid "next"
+msgstr "suivant"
+
+#: Template/Books/index.ctp:53 Template/Files/index.ctp:64
+#: Template/Loans/index.ctp:63 Template/Tags/index.ctp:47
+#: Template/Users/index.ctp:47
+msgid "last"
+msgstr "dernier"
+
+#: Template/Books/index.ctp:55 Template/Files/index.ctp:66
+#: Template/Loans/index.ctp:65 Template/Tags/index.ctp:49
+#: Template/Users/index.ctp:49
+msgid ""
+"Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} "
+"total"
+msgstr ""
+"Page {{page}} sur {{pages}}, affichant le {{courant}} enregistrement (s) sur "
+"le {{nombre}} total"
+
+#: Template/Books/view.ctp:11
+msgid "Delete Book"
+msgstr "Supprimer le livre"
+
+#: Template/Books/view.ctp:22
+msgid "Loan"
+msgstr "Prêt"
+
+#: Template/Books/view.ctp:26 Template/Loans/view.ctp:69
+#: Template/Loans/view.ctp:115 Template/Tags/view.ctp:22
+msgid "Title"
+msgstr "Titre"
+
+#: Template/Books/view.ctp:30 Template/Loans/view.ctp:116
+msgid "Author"
+msgstr "Auteur"
+
+#: Template/Books/view.ctp:34 Template/Loans/view.ctp:117
+msgid "Date Published"
+msgstr "Date publiée"
+
+#: Template/Books/view.ctp:38 Template/Files/view.ctp:34
+#: Template/Files/view.ctp:59 Template/Loans/view.ctp:56
+#: Template/Loans/view.ctp:70 Template/Loans/view.ctp:119
+#: Template/Tags/view.ctp:26 Template/Tags/view.ctp:46
+#: Template/Users/view.ctp:26 Template/Users/view.ctp:46
+msgid "Created"
+msgstr "Créé"
+
+#: Template/Books/view.ctp:42 Template/Files/view.ctp:38
+#: Template/Files/view.ctp:60 Template/Loans/view.ctp:60
+#: Template/Loans/view.ctp:71 Template/Loans/view.ctp:120
+#: Template/Tags/view.ctp:30 Template/Tags/view.ctp:47
+#: Template/Users/view.ctp:30 Template/Users/view.ctp:47
+msgid "Modified"
+msgstr "Modifié"
+
+#: Template/Books/view.ctp:47 Template/Loans/view.ctp:118
+msgid "Description"
+msgstr "Description"
+
+#: Template/Files/add.ctp:10 Template/Files/edit.ctp:16
+#: Template/Files/view.ctp:12 Template/Loans/view.ctp:20
+msgid "List Files"
+msgstr "Afficher les fichiers"
+
+#: Template/Files/add.ctp:18
+msgid "Add File"
+msgstr "Ajouter le fichier"
+
+#: Template/Files/edit.ctp:24 Template/Files/view.ctp:10
+msgid "Edit File"
+msgstr "Editer le fichier"
+
+#: Template/Files/index.ctp:10 Template/Files/view.ctp:13
+#: Template/Loans/view.ctp:21
+msgid "New File"
+msgstr "Nouveau fichier"
+
+#: Template/Files/index.ctp:16
+msgid "Files"
+msgstr "Fichiers"
+
+#: Template/Files/index.ctp:21
+msgid "Preview"
+msgstr "Aperçu"
+
+#: Template/Files/view.ctp:11
+msgid "Delete File"
+msgstr "Supprimer le fichier"
+
+#: Template/Files/view.ctp:22
+msgid "Name"
+msgstr "Nom"
+
+#: Template/Files/view.ctp:26
+msgid "Path"
+msgstr "Chemin"
+
+#: Template/Files/view.ctp:30 Template/Files/view.ctp:51
+msgid "Id"
+msgstr "Id"
+
+#: Template/Files/view.ctp:42
+msgid "Status"
+msgstr "Statut"
+
+#: Template/Files/view.ctp:43
+msgid "Yes"
+msgstr "Oui"
+
+#: Template/Files/view.ctp:43
+msgid "No"
+msgstr "Non"
+
+#: Template/Files/view.ctp:47 Template/Tags/view.ctp:35
+#: Template/Users/view.ctp:35
+msgid "Related Loans"
+msgstr "Prêts associés"
+
+#: Template/Files/view.ctp:52 Template/Tags/view.ctp:39
+#: Template/Users/view.ctp:39
+msgid "User Id"
+msgstr "Identifiant d'utilisateur"
+
+#: Template/Files/view.ctp:53 Template/Loans/view.ctp:40
+#: Template/Tags/view.ctp:40 Template/Users/view.ctp:40
+msgid "Fine"
+msgstr "Coût"
+
+#: Template/Files/view.ctp:54 Template/Loans/view.ctp:32
+#: Template/Tags/view.ctp:41 Template/Users/view.ctp:41
+msgid "Note"
+msgstr "Remarque"
+
+#: Template/Files/view.ctp:55 Template/Loans/view.ctp:36
+#: Template/Tags/view.ctp:42 Template/Users/view.ctp:42
+msgid "Slug"
+msgstr "Slug"
+
+#: Template/Files/view.ctp:56 Template/Loans/view.ctp:44
+#: Template/Tags/view.ctp:43 Template/Users/view.ctp:43
+msgid "Date Issued"
+msgstr "Date d'émission"
+
+#: Template/Files/view.ctp:57 Template/Loans/view.ctp:48
+#: Template/Tags/view.ctp:44 Template/Users/view.ctp:44
+msgid "Date Due"
+msgstr "Date d'échéance"
+
+#: Template/Files/view.ctp:58 Template/Loans/view.ctp:52
+#: Template/Tags/view.ctp:45 Template/Users/view.ctp:45
+msgid "Date Returned"
+msgstr "Date de retour"
+
+#: Template/Layout/error.ctp:36 Template/Error/error400.ctp:36
+#: Template/Error/error500.ctp:41
+msgid "Error"
+msgstr "Erreur"
+
+#: Template/Layout/error.ctp:44
+msgid "Back"
+msgstr "Retour"
+
+#: Template/Loans/add.ctp:11 Template/Loans/edit.ctp:17
+#: Template/Loans/index.ctp:11 Template/Loans/view.ctp:14
+#: Template/Users/add.ctp:10 Template/Users/edit.ctp:16
+#: Template/Users/view.ctp:12
+msgid "List Users"
+msgstr "Afficher les utilisateurs"
+
+#: Template/Loans/add.ctp:12 Template/Loans/edit.ctp:18
+#: Template/Loans/index.ctp:12 Template/Loans/view.ctp:15
+#: Template/Users/index.ctp:10 Template/Users/view.ctp:13
+msgid "New User"
+msgstr "Nouvel utilisateur"
+
+#: Template/Loans/add.ctp:15 Template/Loans/edit.ctp:21
+#: Template/Loans/index.ctp:15 Template/Loans/view.ctp:18
+#: Template/Tags/add.ctp:10 Template/Tags/edit.ctp:16 Template/Tags/view.ctp:12
+msgid "List Tags"
+msgstr "Afficher les balises"
+
+#: Template/Loans/add.ctp:16 Template/Loans/edit.ctp:22
+#: Template/Loans/index.ctp:16 Template/Loans/view.ctp:19
+#: Template/Tags/index.ctp:10 Template/Tags/view.ctp:13
+msgid "New Tag"
+msgstr "Nouvelle étiquette"
+
+#: Template/Loans/add.ctp:22
+msgid "Add Loan"
+msgstr "Ajouter un prêt"
+
+#: Template/Loans/edit.ctp:28 Template/Loans/view.ctp:10
+msgid "Edit Loan"
+msgstr "Modifier le prêt"
+
+#: Template/Loans/index.ctp:20
+msgid "Loans"
+msgstr "Prêts"
+
+#: Template/Loans/view.ctp:11
+msgid "Delete Loan"
+msgstr "Supprimer le prêt"
+
+#: Template/Loans/view.ctp:28
+msgid "User"
+msgstr "Utilisateur"
+
+#: Template/Loans/view.ctp:65
+msgid "Related Tags"
+msgstr "Tags associés"
+
+#: Template/Loans/view.ctp:90
+msgid "Related Files"
+msgstr "Fichiers associés"
+
+#: Template/Loans/view.ctp:94
+msgid "Image"
+msgstr "Image"
+
+#: Template/Loans/view.ctp:111
+msgid "Related Books"
+msgstr "Livres associés"
+
+#: Template/Pages/about.ctp:23
+msgid "Applications internet"
+msgstr "Applications internet"
+
+#: Template/Pages/about.ctp:24
+msgid "Automne 2019, Collège Montmorency"
+msgstr "Automne 2019, Collège Montmorency"
+
+#: Template/Pages/about.ctp:25
+msgid "Diagramme de la bd"
+msgstr "Diagramme de la bd"
+
+#: Template/Pages/about.ctp:27
+msgid "Diagramme original"
+msgstr "Diagramme original"
+
+#: Template/Tags/add.ctp:18
+msgid "Add Tag"
+msgstr "Ajouter une étiquette"
+
+#: Template/Tags/edit.ctp:24 Template/Tags/view.ctp:10
+msgid "Edit Tag"
+msgstr "Modifier la balise"
+
+#: Template/Tags/index.ctp:16
+msgid "Tags"
+msgstr "Balises"
+
+#: Template/Tags/view.ctp:11
+msgid "Delete Tag"
+msgstr "Supprimer la balise"
+
+#: Template/Users/add.ctp:18
+msgid "Add User"
+msgstr "Ajouter un utilisateur"
+
+#: Template/Users/edit.ctp:24 Template/Users/view.ctp:10
+msgid "Edit User"
+msgstr "Modifier l'utilisateur"
+
+#: Template/Users/index.ctp:16
+msgid "Users"
+msgstr "Utilisateurs"
+
+#: Template/Users/view.ctp:11
+msgid "Delete User"
+msgstr "Supprimer l'utilisateur"
+
+#: Template/Users/view.ctp:22
+msgid "Email"
+msgstr "Courriel"
+
+#: Template/Error/error400.ctp:37
+msgid "The requested address {0} was not found on this server."
+msgstr "L'adresse demandée {0} n'a pas été trouvée sur ce serveur."
+
+#: Template/Error/error500.ctp:39
+msgid "An Internal Error Has Occurred"
+msgstr "Une erreur interne s'est produite"

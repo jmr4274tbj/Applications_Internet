@@ -27,11 +27,7 @@ class File extends Entity
      * @var array
      */
     protected $_accessible = [
-        'name' => true,
-        'path' => true,
-        'created' => true,
-        'modified' => true,
-        'status' => true,
-        'loans' => true
+        '*' => true,
+        'id' => false
     ];
 }

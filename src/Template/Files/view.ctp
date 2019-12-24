@@ -22,9 +22,13 @@
             <th scope="row"><?= __('Name') ?></th>
             <td><?= h($file->name) ?></td>
         </tr>
-        <tr>
-            <th scope="row"><?= __('Path') ?></th>
-            <td><?= h($file->path) ?></td>
+        <tr>         
+            <td>
+                <?php echo $this->Html->image($file->path.$file->name, [
+                    "alt" => $file->name,
+                    ]);
+                ?>
+            </td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>
@@ -52,7 +56,6 @@
                 <th scope="col"><?= __('User Id') ?></th>
                 <th scope="col"><?= __('Fine') ?></th>
                 <th scope="col"><?= __('Note') ?></th>
-                <th scope="col"><?= __('Slug') ?></th>
                 <th scope="col"><?= __('Date Issued') ?></th>
                 <th scope="col"><?= __('Date Due') ?></th>
                 <th scope="col"><?= __('Date Returned') ?></th>
@@ -66,7 +69,6 @@
                 <td><?= h($loans->user_id) ?></td>
                 <td><?= h($loans->fine) ?></td>
                 <td><?= h($loans->note) ?></td>
-                <td><?= h($loans->slug) ?></td>
                 <td><?= h($loans->date_issued) ?></td>
                 <td><?= h($loans->date_due) ?></td>
                 <td><?= h($loans->date_returned) ?></td>

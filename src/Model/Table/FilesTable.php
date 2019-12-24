@@ -9,13 +9,12 @@ use Cake\Validation\Validator;
 /**
  * Files Model
  *
- * @property \App\Model\Table\LoansTable&\Cake\ORM\Association\BelongsToMany $Loans
+ * @property \App\Model\Table\ArticlesTable|\Cake\ORM\Association\BelongsToMany $Articles
  *
  * @method \App\Model\Entity\File get($primaryKey, $options = [])
  * @method \App\Model\Entity\File newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\File[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\File|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\File saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\File|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
  * @method \App\Model\Entity\File patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
  * @method \App\Model\Entity\File[] patchEntities($entities, array $data, array $options = [])
  * @method \App\Model\Entity\File findOrCreate($search, callable $callback = null, $options = [])
@@ -24,6 +23,7 @@ use Cake\Validation\Validator;
  */
 class FilesTable extends Table
 {
+
     /**
      * Initialize method
      *
@@ -57,23 +57,20 @@ class FilesTable extends Table
     {
         $validator
             ->integer('id')
-            ->allowEmptyString('id', null, 'create');
-
-        /*$validator
-            ->scalar('name')
-            ->maxLength('name', 255)
-            ->requirePresence('name', 'create')
-            ->notEmptyString('name');
+            ->allowEmpty('id', 'create');
 
         $validator
-            ->scalar('path')
-            ->maxLength('path', 255)
+            ->requirePresence('name', 'create')
+            ->notEmpty('name');
+
+        $validator
             ->requirePresence('path', 'create')
-            ->notEmptyString('path');*/
+            ->notEmpty('path');
 
         $validator
             ->boolean('status')
-            ->notEmptyString('status');
+            ->requirePresence('status', 'create')
+            ->notEmpty('status');
 
         return $validator;
     }

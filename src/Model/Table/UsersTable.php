@@ -7,23 +7,22 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Users Model
+ * Subcategories Model
  *
- * @property \App\Model\Table\LoansTable&\Cake\ORM\Association\HasMany $Loans
+ * @property \App\Model\Table\CategoriesTable|\Cake\ORM\Association\BelongsTo $Categories
+ * @property \App\Model\Table\ArticlesTable|\Cake\ORM\Association\HasMany $Articles
  *
- * @method \App\Model\Entity\User get($primaryKey, $options = [])
- * @method \App\Model\Entity\User newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\User[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\User|false save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\User saveOrFail(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\User patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\User[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\User findOrCreate($search, callable $callback = null, $options = [])
- *
- * @mixin \Cake\ORM\Behavior\TimestampBehavior
+ * @method \App\Model\Entity\Subcategory get($primaryKey, $options = [])
+ * @method \App\Model\Entity\Subcategory newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\Subcategory[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\Subcategory|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\Subcategory patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\Subcategory[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\Subcategory findOrCreate($search, callable $callback = null, $options = [])
  */
-class UsersTable extends Table
+class SubcategoriesTable extends Table
 {
+
     /**
      * Initialize method
      *
@@ -34,14 +33,15 @@ class UsersTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('users');
-        $this->setDisplayField('id');
+        $this->setTable('subcategories');
+        $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
-        $this->addBehavior('Timestamp');
-
+        $this->belongsTo('Categories', [
+            'foreignKey' => 'category_id'
+        ]);
         $this->hasMany('Loans', [
-            'foreignKey' => 'user_id'
+            'foreignKey' => 'subcategory_id'
         ]);
     }
 
@@ -55,18 +55,11 @@ class UsersTable extends Table
     {
         $validator
             ->integer('id')
-            ->allowEmptyString('id', null, 'create');
+            ->allowEmpty('id', 'create');
 
         $validator
-            ->email('email')
-            ->requirePresence('email', 'create')
-            ->notEmptyString('email');
-
-        $validator
-            ->scalar('password')
-            ->maxLength('password', 255)
-            ->requirePresence('password', 'create')
-            ->notEmptyString('password');
+            ->scalar('name')
+            ->allowEmpty('name');
 
         return $validator;
     }
@@ -80,7 +73,7 @@ class UsersTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->isUnique(['email']));
+        $rules->add($rules->existsIn(['category_id'], 'Categories'));
 
         return $rules;
     }

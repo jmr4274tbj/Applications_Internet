@@ -19,8 +19,20 @@
     <h3><?= h($user->id) ?></h3>
     <table class="vertical-table">
         <tr>
-            <th scope="row"><?= __('Email') ?></th>
-            <td><?= h($user->email) ?></td>
+            <th scope="row"><?= __('Username') ?></th>
+            <td><?= h($user->username) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Password') ?></th>
+            <td><?= h($user->password) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Role') ?></th>
+            <td><?= h($user->role) ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Id') ?></th>
+            <td><?= $this->Number->format($user->id) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Created') ?></th>
@@ -39,7 +51,6 @@
                 <th scope="col"><?= __('User Id') ?></th>
                 <th scope="col"><?= __('Fine') ?></th>
                 <th scope="col"><?= __('Note') ?></th>
-                <th scope="col"><?= __('Slug') ?></th>
                 <th scope="col"><?= __('Date Issued') ?></th>
                 <th scope="col"><?= __('Date Due') ?></th>
                 <th scope="col"><?= __('Date Returned') ?></th>
@@ -52,7 +63,6 @@
                 <td><?= h($loans->user_id) ?></td>
                 <td><?= h($loans->fine) ?></td>
                 <td><?= h($loans->note) ?></td>
-                <td><?= h($loans->slug) ?></td>
                 <td><?= h($loans->date_issued) ?></td>
                 <td><?= h($loans->date_due) ?></td>
                 <td><?= h($loans->date_returned) ?></td>

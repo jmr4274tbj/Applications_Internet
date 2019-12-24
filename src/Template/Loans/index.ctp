@@ -1,59 +1,79 @@
+
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Loan[]|\Cake\Collection\CollectionInterface $loans
+ * @var \App\Model\Entity\Article[]|\Cake\Collection\CollectionInterface $articles
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        <?= __('Actions') ?>
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">      
         <li><?= $this->Html->link(__('New Loan'), ['action' => 'add']) ?></li>
+        <li role="separator" class="divider"></li>
+        <li><?= $this->Html->link(__('List Files'), ['controller' => 'Files', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('New File'), ['controller' => 'Files', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Books'), ['controller' => 'Books', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Book'), ['controller' => 'Books', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Tags'), ['controller' => 'Tags', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Tag'), ['controller' => 'Tags', 'action' => 'add']) ?></li>
     </ul>
-</nav>
-<div class="loans index large-9 medium-8 columns content">
-    <h3><?= __('Loans') ?></h3>
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('user_id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('fine') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('note') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('slug') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_issued') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_due') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('date_returned') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('created') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($loans as $loan): ?>
-            <tr>
-                <td><?= $loan->has('user') ? $this->Html->link($loan->user->id, ['controller' => 'Users', 'action' => 'view', $loan->user->id]) : '' ?></td>
-                <td><?= $this->Number->format($loan->fine) ?></td>
-                <td><?= h($loan->note) ?></td>
-                <td><?= h($loan->slug) ?></td>
-                <td><?= h($loan->date_issued) ?></td>
-                <td><?= h($loan->date_due) ?></td>
-                <td><?= h($loan->date_returned) ?></td>
-                <td><?= h($loan->created) ?></td>
-                <td><?= h($loan->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $loan->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $loan->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $loan->id], ['confirm' => __('Are you sure you want to delete # {0}?', $loan->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h3><?= __('Loans') ?></h3>  
+        </div>
+        <div class="row">
+            <?php foreach ($loans as $loan): ?> 
+                <div class="col-lg-2">
+                    <h3><?= $this->Html->link(h($loan->title), ['action' => 'view', $loan->id]) ?></h3>
+                    <span class="row small">
+                        <?= __('by '). $loan->user['username'] ?> <br />
+                        (
+                        <?php
+                        if ($loan->modified != NULL) {
+                            echo h($loan->modified);
+                        } else {
+                            echo h($loan->created);
+                        }
+                        ?>
+                        )
+                    </span>
+                    <div class="icon">
+                        <?php
+                        if (!empty($loan->files)) {
+                            $file = reset($loan->files);
+                            echo $this->Html->image($file->path . $file->name, [
+                                "alt" => $file->name,
+                                "width" => "150px",
+                                "height" => "110px",
+                                'url' => ['action' => 'view', $file->id]
+                            ]);
+                        }
+                        ?>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <?= __('Actions') ?>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li></li>
+                            <li><?= $this->Html->link(__('Edit'), ['action' => 'edit', $loan->id]) ?></li>
+                            <li><?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $loan->id], ['confirm' => __('Are you sure you want to delete # {0}?', $loan->id)]) ?></li>
+                        </ul>
+                    </div>
+                </div>
+                <?php
+            endforeach;
+            ?>
+        </div>
+
+    </div>
+
     <div class="paginator">
         <ul class="pagination">
             <?= $this->Paginator->first('<< ' . __('first')) ?>

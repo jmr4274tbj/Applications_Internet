@@ -28,6 +28,32 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow();
+    }
+
+    public function initialize() {
+
+        parent::initialize();
+    }
+
+    /**
+     *  Return Forbiden 403
+     * 
+     */
+    public function forbiden() {
+        throw new ForbiddenException("Access not allowed");
+    }
+
+    /**
+     *  Return Unauthorized 401
+     * 
+     */
+    public function unauthorized() {
+        throw new UnauthorizedException("You are not logged in");
+    }
+    
     /**
      * Displays a view
      *

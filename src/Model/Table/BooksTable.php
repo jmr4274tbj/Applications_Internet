@@ -54,11 +54,8 @@ class BooksTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
-            ->integer('id')
-            ->allowEmptyString('id', null, 'create');
 
-        $validator
+       /* $validator
             ->scalar('publisher')
             ->maxLength('publisher', 255)
             ->requirePresence('publisher', 'create')
@@ -84,22 +81,27 @@ class BooksTable extends Table
         $validator
             ->scalar('description')
             ->requirePresence('description', 'create')
-            ->notEmptyString('description');
+            ->notEmptyString('description');*/
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+        
+        $validator
+            ->allowEmpty('publisher');
+          
+        $validator
+            ->allowEmpty('title');
+
+        $validator
+            ->allowEmpty('author');
+
+        $validator
+            ->allowEmpty('date_published');
+
+        $validator
+            ->allowEmpty('description');
 
         return $validator;
     }
 
-    /**
-     * Returns a rules checker object that will be used for validating
-     * application integrity.
-     *
-     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
-     * @return \Cake\ORM\RulesChecker
-     */
-    public function buildRules(RulesChecker $rules)
-    {
-        $rules->add($rules->existsIn(['loan_id'], 'Loans'));
-
-        return $rules;
-    }
 }

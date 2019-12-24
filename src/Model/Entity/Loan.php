@@ -33,18 +33,7 @@ class Loan extends Entity
      * @var array
      */
     protected $_accessible = [
-        'user_id' => true,
-        'fine' => true,
-        'note' => true,
-        'slug' => true,
-        'date_issued' => true,
-        'date_due' => true,
-        'date_returned' => true,
-        'created' => true,
-        'modified' => true,
-        'user' => true,
-        'books' => true,
-        'tags' => true,
-        'files' => true
+        '*' => true,
+        'id' => false
     ];
 }

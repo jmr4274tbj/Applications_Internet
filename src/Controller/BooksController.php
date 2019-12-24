@@ -12,10 +12,6 @@ use App\Controller\AppController;
  */
 class BooksController extends AppController
 {
-    public function initialize() {
-        parent::initialize();
-        $this->Auth->allow(['add', 'edit', 'delete']);
-    }
     
     /**
      * Index method
@@ -24,12 +20,10 @@ class BooksController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Loans']
-        ];
         $books = $this->paginate($this->Books);
 
         $this->set(compact('books'));
+        $this->set('_serialize', ['book']);
     }
 
     /**
@@ -46,6 +40,7 @@ class BooksController extends AppController
         ]);
 
         $this->set('book', $book);
+        $this->set('_serialize', ['book']);
     }
 
     /**
@@ -69,6 +64,7 @@ class BooksController extends AppController
         
         $loans = $this->Books->Loans->find('list', ['limit' => 200]);
         $this->set(compact('book', 'loans'));
+        $this->set('_serialize', ['book', 'loans']);
     }
 
     /**
@@ -95,6 +91,7 @@ class BooksController extends AppController
         }
         $loans = $this->Books->Loans->find('list', ['limit' => 200]);
         $this->set(compact('book', 'loans'));
+        $this->set('_serialize', ['book', 'loans']);
     }
 
     /**
@@ -118,7 +115,11 @@ class BooksController extends AppController
     }
     
     public function isAuthorized($user) {
-        // By default deny access.
-        return true;
+        // All registered users can add loans
+        if ($this->request->getParam('action') === 'add') {
+            return true;
+        }
+
+        return parent::isAuthorized($user);
     }
 }

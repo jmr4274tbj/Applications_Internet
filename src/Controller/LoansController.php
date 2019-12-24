@@ -12,11 +12,6 @@ use App\Controller\AppController;
  */
 class LoansController extends AppController
 {
-    public function initialize() {
-        parent::initialize();
-        // Add the 'add' action to the allowed actions list.
-        $this->Auth->allow(['tags']);
-    }
     
     /**
      * Index method
@@ -25,12 +20,10 @@ class LoansController extends AppController
      */
     public function index()
     {
-        $this->paginate = [
-            'contain' => ['Users']
-        ];
-        $loans = $this->paginate($this->Loans);
+        $loans = $this->paginate($this->Loans, ['contain' => ['Files', 'Users']]);
 
         $this->set(compact('loans'));
+        $this->set('_serialize', ['loan']);
     }
 
     /**
@@ -43,10 +36,11 @@ class LoansController extends AppController
     public function view($id = null)
     {
         $loan = $this->Loans->get($id, [
-            'contain' => ['Users', 'Tags', 'Books', 'Files']
+            'contain' => ['Users', 'Books', 'Files', 'Subcategories']
         ]);
         
         $this->set('loan', $loan);
+        $this->set('_serialize', ['loan']);
     }
 
     /**
@@ -54,15 +48,12 @@ class LoansController extends AppController
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
-    {        
+       public function add() {
         $loan = $this->Loans->newEntity();
         if ($this->request->is('post')) {
             $loan = $this->Loans->patchEntity($loan, $this->request->getData());
-
-            // Changed: Set the user_id from the session.
+            // Ajout de cette ligne
             $loan->user_id = $this->Auth->user('id');
-	    //debug($loan); die();
             if ($this->Loans->save($loan)) {
                 $this->Flash->success(__('The loan has been saved.'));
 
@@ -70,6 +61,8 @@ class LoansController extends AppController
             }
             $this->Flash->error(__('The loan could not be saved. Please, try again.'));
         }
+        $files = $this->Loans->Files->find('list', ['limit' => 200]);
+
         // Bâtir la liste des catégories  
         $this->loadModel('Categories');
         $categories = $this->Categories->find('list', ['limit' => 200]);
@@ -83,53 +76,41 @@ class LoansController extends AppController
         $subcategories = $this->Loans->Subcategories->find('list', [
             'conditions' => ['Subcategories.category_id' => $category_id],
         ]);
-        
-        $tags = $this->Loans->Tags->find('list', ['limit' => 200]);
-        $files = $this->Loans->Files->find('list', ['limit' => 200]);
-        $this->set(compact('loan', 'tags', 'files', 'subcategories', 'categories'));
-    }
 
+        $this->set(compact('loan', 'subcategories', 'categories', 'files'));
+        $this->set('_serialize', ['loan', 'subcategories', 'categories', 'files']);
+    }
+    
     /**
      * Edit method
      *
      * @param string|null $id Loan id.
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
-     * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-     */
-    public function edit($id = null)
-    {
-        $loan = $this->Loans->get($id);
-                
+     * @throws \Cake\Network\Exception\NotFoundException When record not found.
+     */ 
+    public function edit($id = null) {
+        $loan = $this->Loans->get($id, [
+            'contain' => ['Files', 'Subcategories']
+        ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
-            $loan = $this->Loans->patchEntity($loan, $this->request->getData(), [
-                // Added: Disable modification of user_id.
-                'accessibleFields' => ['user_id' => false]
-            ]);
+            $loan = $this->Loans->patchEntity($loan, $this->request->getData());
+            // Ajout de cette ligne
+            $loan->user_id = $this->Auth->user('id');
             if ($this->Loans->save($loan)) {
                 $this->Flash->success(__('The loan has been saved.'));
 
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('The loan could not be saved. Please, try again.'));
-        }     
-        // Bâtir la liste des catégories  
-        $this->loadModel('Categories');
-        $categories = $this->Categories->find('list', ['limit' => 200]);
-
-        // Extraire le id de la première catégorie
-        $categories = $categories->toArray();
-        reset($categories);
-        $category_id = key($categories);
-
-        // Bâtir la liste des sous-catégories reliées à cette catégorie
-        $subcategories = $this->Loans->Subcategories->find('list', [
-            'conditions' => ['Subcategories.category_id' => $category_id],
-        ]);
-        
-        $users = $this->Loans->Users->find('list', ['limit' => 200]);
-        $tags = $this->Loans->Tags->find('list', ['limit' => 200]);
+        }
         $files = $this->Loans->Files->find('list', ['limit' => 200]);
-        $this->set(compact('loan', 'tags', 'files', 'subcategories', 'categories'));
+        $this->set(compact('loan', 'files'));
+        $this->set('_serialize', ['loan']);
+    }
+    public function editLast($id = null) {
+        $loans =  $this->Loans->find('all')->all();
+        $lastLoan = $loans->last();
+        return $this->redirect(['action' => 'edit', $lastLoan->id]);
     }
 
     /**
@@ -139,10 +120,9 @@ class LoansController extends AppController
      * @return \Cake\Http\Response|null Redirects to index.
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
-    public function delete($id = null)
-    {
+    public function delete($id = null) {
         $this->request->allowMethod(['post', 'delete']);
-        $loan = $this->Loans->findBySlug($slug)->firstOrFail();
+        $loan = $this->Loans->get($id);
         if ($this->Loans->delete($loan)) {
             $this->Flash->success(__('The loan has been deleted.'));
         } else {
@@ -151,39 +131,23 @@ class LoansController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
-    
-    public function tags(...$tags) {
-        // The 'pass' key is provided by CakePHP and contains all
-        // the passed URL path segments in the request.
-        // $tags = $this->request->getParam('pass');
-        // Use the LoansTable to find tagged loans.
-        $loans = $this->Loans->find('tagged', [
-            'tags' => $tags
-        ]);
-
-        // Pass variables into the view template context.
-        $this->set([
-            'loans' => $loans,
-            'tags' => $tags
-        ]);
-    }
+   
 
     public function isAuthorized($user) {
-        $action = $this->request->getParam('action');
-        // The add and tags actions are always allowed to logged in users.
-        if (in_array($action, ['add', 'tags', 'edit', 'delete'])) {
+        // All registered users can add loans
+        if ($this->request->getParam('action') === 'add') {
             return true;
         }
 
-        // All other actions require a slug.
-        $slug = $this->request->getParam('pass.0');
-        if (!$slug) {
-            return false;
+        // The owner of an loan can edit and delete it
+        if (in_array($this->request->getParam('action'), ['edit', 'delete'])) {
+            $loanId = (int) $this->request->getParam('pass.0');
+            if ($this->Loans->isOwnedBy($loanId, $user['id'])) {
+                return true;
+            }
         }
 
-        // Check that the loan belongs to the current user.
-        $loan = $this->Loans->findBySlug($slug)->first();
-
-        return $loan->user_id === $user['id'];
+        return parent::isAuthorized($user);
     }
+
 }

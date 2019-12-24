@@ -2,22 +2,23 @@
 
 namespace App\Model\Entity;
 
-use Cake\Auth\DefaultPasswordHasher; // Add this line
 use Cake\ORM\Entity;
+use Cake\Auth\DefaultPasswordHasher;
 
 /**
  * User Entity
  *
  * @property int $id
- * @property string $email
+ * @property string $username
  * @property string $password
- * @property \Cake\I18n\FrozenTime|null $created
- * @property \Cake\I18n\FrozenTime|null $modified
+ * @property string $role
+ * @property \Cake\I18n\FrozenTime $created
+ * @property \Cake\I18n\FrozenTime $modified
  *
- * @property \App\Model\Entity\Loan[] $loans
+ * @property \App\Model\Entity\Article[] $articles
  */
-class User extends Entity
-{
+class User extends Entity {
+
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
@@ -28,8 +29,9 @@ class User extends Entity
      * @var array
      */
     protected $_accessible = [
-        'email' => true,
+        'username' => true,
         'password' => true,
+        'role' => true,
         'created' => true,
         'modified' => true,
         'loans' => true
@@ -44,12 +46,10 @@ class User extends Entity
         'password'
     ];
 
-    // Add this method
-    protected function _setPassword($value) {
-        if (strlen($value)) {
-            $hasher = new DefaultPasswordHasher();
-
-            return $hasher->hash($value);
+    protected function _setPassword($password) {
+        if (strlen($password) > 0) {
+            return (new DefaultPasswordHasher)->hash($password);
         }
     }
+
 }

@@ -36,7 +36,7 @@ class LoansTable extends Table
     public function initialize(array $config)
     {
         parent::initialize($config);
-        //$this->addBehavior('Translate', ['fields' => ['note']]);
+
         $this->setTable('loans');
         $this->setDisplayField('title');
         $this->setPrimaryKey('id');
@@ -47,16 +47,11 @@ class LoansTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
-		$this->belongsTo('Subcategories', [
+	$this->belongsTo('Subcategories', [
             'foreignKey' => 'subcategory_id'
         ]);
         $this->hasMany('Books', [
             'foreignKey' => 'loan_id'
-        ]);
-        $this->belongsToMany('Tags', [
-            'foreignKey' => 'loan_id',
-            'targetForeignKey' => 'tag_id',
-            'joinTable' => 'loans_tags'
         ]);
         $this->belongsToMany('Files', [
             'foreignKey' => 'loan_id',
@@ -73,7 +68,7 @@ class LoansTable extends Table
      */
     public function validationDefault(Validator $validator)
     {
-        $validator
+        /*$validator
             ->integer('id')
             ->allowEmptyString('id', null, 'create');
 
@@ -88,13 +83,6 @@ class LoansTable extends Table
             ->requirePresence('note', 'create')
             ->notEmptyString('note');
 
-        /*$validator
-            ->scalar('slug')
-            ->maxLength('slug', 191)
-            ->requirePresence('slug', 'create')
-            ->notEmptyString('slug')
-            ->add('slug', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
-		*/
         $validator
             ->date('date_issued')
             ->requirePresence('date_issued', 'create')
@@ -110,57 +98,32 @@ class LoansTable extends Table
             ->requirePresence('date_returned', 'create')
             ->notEmptyDate('date_returned');
 
+        return $validator;*/
+        
+        $validator
+            ->integer('id')
+            ->allowEmpty('id', 'create');
+
+        $validator
+            ->allowEmpty('fine');
+
+        $validator
+            ->allowEmpty('note');
+
+        $validator
+            ->allowEmpty('date_issued');
+
+        $validator
+            ->allowEmpty('date_due');
+
+        $validator
+            ->allowEmpty('date_returned');
+        
         return $validator;
     }
-
-    /**
-     * Returns a rules checker object that will be used for validating
-     * application integrity.
-     *
-     * @param \Cake\ORM\RulesChecker $rules The rules object to be modified.
-     * @return \Cake\ORM\RulesChecker
-     */
-    public function buildRules(RulesChecker $rules)
-    {
-        $rules->add($rules->isUnique(['slug']));
-        $rules->add($rules->existsIn(['user_id'], 'Users'));
-
-        return $rules;
-    }
     
-     public function beforeSave($event, $entity, $options) {
-        if ($entity->isNew() && !$entity->slug) {
-            $sluggedTitle = Text::slug($entity->title);
-            // trim slug to maximum length defined in schema
-            $entity->slug = substr($sluggedTitle, 0, 191);
-        }
+    public function isOwnedBy($loanId, $userId) {
+        return $this->exists(['id' => $loanId, 'user_id' => $userId]);
     }
 
-// The $query argument is a query builder instance.
-// The $options array will contain the 'tags' option we passed
-// to find('tagged') in our controller action.
-    public function findTagged(Query $query, array $options) {
-        $columns = [
-            'Loans.id', 'Loans.user_id', 'Loans.fine',
-            'Loans.note', 'Loans.date_issued', 'Loans.date_due',
-            'Loans.date_returned', 'Loans.created',
-            'Loans.slug',
-        ];
-
-        $query = $query
-                ->select($columns)
-                ->distinct($columns);
-
-        if (empty($options['tags'])) {
-            // If there are no tags provided, find loans that have no tags.
-            $query->leftJoinWith('Tags')
-                    ->where(['Tags.title IS' => null]);
-        } else {
-            // Find loans that have one or more of the provided tags.
-            $query->innerJoinWith('Tags')
-                    ->where(['Tags.title IN' => $options['tags']]);
-        }
-
-        return $query->group(['Loans.id']);
-    }
 }

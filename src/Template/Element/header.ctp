@@ -33,7 +33,7 @@
                     ]);
                     ?>
                 </li>
-                <li><?= $this->Html->link(__('About'), ['controller' => 'Pages', 'action' => 'about']) ?></li>
+                <li><?= $this->Html->link(__('About'), ['controller' => 'About', 'action' => 'index']) ?></li>
             </ul>
         </div>
     </div>
